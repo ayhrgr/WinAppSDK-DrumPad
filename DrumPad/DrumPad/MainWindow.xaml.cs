@@ -192,7 +192,9 @@ namespace DrumPad
 
         private void ToggleSwitch_Loaded(object sender, RoutedEventArgs e)
         {
-            if (ApplicationData.Current.LocalSettings.Values.TryGetValue("themeSetting", out object themeSetting) && (int)themeSetting == 0)
+            if (   ApplicationData.Current.LocalSettings.Values.TryGetValue("themeSetting", out object themeSetting) 
+                && (int)themeSetting == 0
+                )
             {
                 dark_switch.IsOn = true;
             }
